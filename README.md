@@ -1,1 +1,1 @@
-# footbool-player-api
+# football-player-api
