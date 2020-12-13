@@ -12,7 +12,6 @@ import java.util.Date;
 public class PostPlayerbasicinfoRequestDto {
     String nationality;
     String playername;
-    String shirtname;
     int height;
     int weight;
     Date birth;
@@ -20,10 +19,9 @@ public class PostPlayerbasicinfoRequestDto {
     String position;
 
     @Builder
-    public PostPlayerbasicinfoRequestDto(String nationality, String playername, String shirtname, int height, int weight, Date birth, char foot, String position) {
+    public PostPlayerbasicinfoRequestDto(String nationality, String playername, int height, int weight, Date birth, char foot, String position) {
         this.nationality = nationality;
         this.playername = playername;
-        this.shirtname = shirtname;
         this.height = height;
         this.weight = weight;
         this.birth = birth;
@@ -36,7 +34,6 @@ public class PostPlayerbasicinfoRequestDto {
         return Playerbasicinfo.builder()
                 .nationality(this.nationality)
                 .playername(this.playername)
-                .shirtname(this.shirtname)
                 .height(this.height)
                 .weight(this.weight)
                 .birth(this.birth)
