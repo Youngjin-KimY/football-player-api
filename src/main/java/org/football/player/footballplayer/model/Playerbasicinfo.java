@@ -5,9 +5,7 @@ import com.sun.istack.NotNull;
 import com.sun.istack.Nullable;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
@@ -15,14 +13,12 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Playerbasicinfo {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     @NotNull
     String nationality;
     @NotNull
     String playername;
-    @Nullable
-    String shirtname;
     @Nullable
     int height;
     @Nullable
@@ -35,10 +31,9 @@ public class Playerbasicinfo {
     String position;
 
     @Builder
-    public Playerbasicinfo(String nationality, String playername, String shirtname, int height, int weight, Date birth, char foot, String position) {
+    public Playerbasicinfo(String nationality, String playername, int height, int weight, Date birth, char foot, String position) {
         this.nationality = nationality;
         this.playername = playername;
-        this.shirtname = shirtname;
         this.height = height;
         this.weight = weight;
         this.birth = birth;

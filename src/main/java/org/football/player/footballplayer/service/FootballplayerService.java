@@ -9,18 +9,21 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
-@RequiredArgsConstructor
 @Service
 public class FootballplayerService {
 
+    @Autowired
     FootballplayerRepository footballplayerRepository;
 
     public Playerbasicinfo GetFootBallPlayerInfo(String name, String nation) {
-        return footballplayerRepository.findByPlayernameAndNationality(name,nation);
+        var ret = footballplayerRepository.findByPlayernameAndNationality(name,nation);
+        return ret;
     }
 
     @Transactional
     public Long PostFootBallPlayerInfo(PostPlayerbasicinfoRequestDto postPlayerbasicinfoRequestDto) {
-        return footballplayerRepository.save(postPlayerbasicinfoRequestDto.toEntity()).getId();
+        var param = postPlayerbasicinfoRequestDto.toEntity();
+        var ret = footballplayerRepository.save(param).getId();
+        return ret;
     }
 }

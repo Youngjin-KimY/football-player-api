@@ -19,7 +19,7 @@ public class FootballplayerController {
         return footBallPlayerService.GetFootBallPlayerInfo(name,nation);
     }
 
-    @RequestMapping(value="",method = RequestMethod.POST)
+    @RequestMapping(value="/api/v1/football-play/basicinfo/post",method = RequestMethod.POST)
     public Long PostFootBallPlayerInfo(@RequestBody PostPlayerbasicinfoRequestDto postPlayerbasicinfoRequestDto)
     {
         return footBallPlayerService.PostFootBallPlayerInfo(postPlayerbasicinfoRequestDto);

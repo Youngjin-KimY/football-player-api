@@ -60,6 +60,7 @@ public class FootballPlayerControllerTest {
                 .findByPlayernameAndNationality(playerBasicInfo.getPlayername(),playerBasicInfo.getNationality());
         assertThat(existingPlayerWithNationality).isNotNull();
         assertThat(existingPlayer).isNotNull();
+        System.out.println(existingPlayerWithNationality.getId());
 
         Playerbasicinfo nonExistingPlayer = footballplayerRepository
                 .findByPlayernameAndNationality("honda","japan");
@@ -84,6 +85,7 @@ public class FootballPlayerControllerTest {
         Long id1 = footballplayerRepository.save(requestDto.toEntity()).getId();
         Long id2 = footballplayerRepository.save(requestDto2.toEntity()).getId();
         var testData = footballplayerRepository.findById(id1);
+        System.out.println(testData.get().getId());
         assertThat(requestDto.toEntity().getPlayername()).isEqualTo(testData.get().getPlayername());
         assertThat(requestDto.toEntity().getNationality()).isEqualTo(testData.get().getNationality());
         assertThat(testData.get().getId()).isNotNull();
