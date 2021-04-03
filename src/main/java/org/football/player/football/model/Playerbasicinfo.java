@@ -1,4 +1,4 @@
-package org.football.player.footballplayer.model;
+package org.football.player.football.model;
 
 
 import com.sun.istack.NotNull;

@@ -1,9 +1,9 @@
-package org.football.player.footballplayer.dto;
+package org.football.player.football.dto;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.football.player.footballplayer.model.Playerbasicinfo;
+import org.football.player.football.model.Playerbasicinfo;
 
 import java.util.Date;
 

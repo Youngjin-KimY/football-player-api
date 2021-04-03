@@ -1,4 +1,4 @@
-package org.football.player.footballplayer;
+package org.football.player.football;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
