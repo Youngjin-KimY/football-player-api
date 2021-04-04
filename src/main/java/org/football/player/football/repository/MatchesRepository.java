@@ -1,2 +1,9 @@
-package org.football.player.football.repository;public interface MatchesRepository {
+package org.football.player.football.repository;
+
+import org.football.player.football.model.Match;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface MatchesRepository extends JpaRepository<Match,Long> {
 }
